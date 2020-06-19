@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Content-Length: 71
+Content-Type: text/plain
+
+GET /echo HTTP/1.1
+Host: www.tutorialspoint.com
+Connection: close
+

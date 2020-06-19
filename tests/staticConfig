@@ -1,0 +1,14 @@
+port 80; # The port my server listens on
+
+location "/echo" EchoHandler {
+}
+
+location "/static1" StaticHandler {
+  root "./files1";  # supports relative path
+}
+
+location "/static2" StaticHandler {
+  root "/files2";  # supports relative path
+}
+location "/health" HealthHandler {
+}

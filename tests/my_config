@@ -1,0 +1,38 @@
+
+  
+port 80; # The port my server listens on
+root /usr/src/projects; 
+location "/echo" EchoHandler {
+}
+
+location "/static1" StaticHandler {
+  root "./static1";
+  
+  
+}
+  location "/html" StaticHandler {
+    
+    root "./html";
+  
+}
+
+
+location "/static2" StaticHandler {
+  root "/files2";  # supports relative path
+}
+
+location "/ucla" ReverseProxyHandler {
+  host "http://www.ucla.edu";
+}
+
+location "/cpp" ReverseProxyHandler {
+  host "http://www.cplusplus.com/";
+}
+
+location "/health" HealthHandler {
+
+}
+location "/content" KeyHandler {
+  root "./content"; 
+}
+
